@@ -1,0 +1,143 @@
+
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+.contenedor-app {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #F5F3FA;
+  min-height: 100vh;
+  background-color: #171525;
+}
+
+/* Estilos del Menú */
+.menu-navegacion {
+  background-color: #29213F;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: #B8A5FF;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.menu-navegacion ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu-navegacion li {
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.menu-navegacion li:hover {
+  color: #B8A5FF;
+}
+
+/* Estilos de la Sección Principal */
+.seccion-principal {
+  padding: 50px 20px;
+  background-color: #171525;
+  min-height: 500px;
+}
+
+.seccion-principal h1 {
+  color: #B8A5FF;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.seccion-principal p {
+  font-size: 16px;
+  color: #D5D0E5;
+  max-width: 650px;
+  margin: 15px auto;
+  line-height: 1.7;
+}
+
+/* Imagen principal */
+.imagen-destacada {
+  width: 600px;
+  max-width: 90%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0px 5px 20px rgba(128, 87, 232, 0.3);
+}
+
+/* Botón con efecto Hover */
+.boton-accion {
+  background-color: #8057E8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.boton-accion:hover {
+  background-color: #B8A5FF;
+  color: #171525;
+  transform: scale(1.05);
+}
+
+/* Mensaje sorpresa */
+.mensaje-sorpresa {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #B8A5FF;
+  font-weight: bold;
+}
+
+/* Estilos del Footer */
+.pie-pagina {
+  background-color: #29213F;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid #8057E8;
+}
+
+.pie-pagina p {
+  margin: 8px;
+  font-size: 14px;
+  color: #D5D0E5;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+  .menu-navegacion {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .menu-navegacion ul {
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .seccion-principal h1 {
+    font-size: 27px;
+  }
+
+  .imagen-destacada {
+    height: 220px;
+  }
+}
