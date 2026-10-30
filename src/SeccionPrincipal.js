@@ -1,40 +1,118 @@
 
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function SeccionPrincipal() {
-  const [mostrarMensaje, setMostrarMensaje] = useState(false);
+  const categorias = [
+    {
+      nombre: "Guitarras",
+      imagen: "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=700",
+      enlace: "/instrumentos"
+    },
+    {
+      nombre: "Pianos y teclados",
+      imagen: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=700",
+      enlace: "/instrumentos"
+    },
+    {
+      nombre: "Baterías",
+      imagen: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=700",
+      enlace: "/instrumentos"
+    },
+    {
+      nombre: "Accesorios",
+      imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700",
+      enlace: "/accesorios"
+    }
+  ];
 
   return (
-    <main className="seccion-principal">
+    <main className="inicio">
 
-      <h1>Bienvenidos a SONIC WAVE</h1>
+      <section className="portada-inicio">
+        <div className="contenido-portada">
+          <span className="subtitulo-portada">
+            BIENVENIDO A SONIC WAVE
+          </span>
 
-      <p>
-        Encuentra los mejores instrumentos musicales y accesorios
-        para llevar tu pasión por la música a otro nivel.
-      </p>
+          <h1>
+            EL SONIDO QUE <br />
+            <span>TE DEFINE</span>
+          </h1>
 
-      <img
-        src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1000"
-        alt="Guitarra musical"
-        className="imagen-destacada"
-      />
+          <p>
+            Encuentra los instrumentos y accesorios ideales
+            para expresar tu talento y llevar tu música
+            a otro nivel.
+          </p>
 
-      <br />
+          <div className="botones-portada">
+            <Link to="/instrumentos" className="boton-inicio">
+              Explorar instrumentos
+            </Link>
 
-      <button
-        className="boton-accion"
-        onClick={() => setMostrarMensaje(!mostrarMensaje)}
-      >
-        {mostrarMensaje ? "Ocultar sorpresa" : "Descubrir sorpresa"}
-      </button>
+            <Link to="/accesorios" className="boton-secundario">
+              Ver accesorios
+            </Link>
+          </div>
+        </div>
+      </section>
 
-      {mostrarMensaje && (
-        <p className="mensaje-sorpresa">
-          ¡Felicidades! Tienes un 20% de descuento en tu primera compra.
-        </p>
-      )}
+      <section className="seccion-categorias">
+        <div className="titulo-seccion">
+          <span>EXPLORA NUESTRA TIENDA</span>
+          <h2>Encuentra tu instrumento</h2>
+          <p>Todo lo que necesitas para crear tu propio sonido.</p>
+        </div>
+
+        <div className="rejilla-categorias">
+          {categorias.map((categoria, index) => (
+            <Link
+              to={categoria.enlace}
+              className="tarjeta-categoria"
+              key={index}
+            >
+              <img src={categoria.imagen} alt={categoria.nombre} />
+              <div className="nombre-categoria">
+                <h3>{categoria.nombre}</h3>
+                <span>Explorar →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="banner-promocion">
+        <div>
+          <span>SONIC WAVE EXCLUSIVE</span>
+          <h2>LA MÚSICA NO TIENE LÍMITES</h2>
+          <p>Descubre nuevas posibilidades para tu talento musical.</p>
+          <Link to="/instrumentos" className="boton-inicio">
+            Descubrir colección
+          </Link>
+        </div>
+      </section>
+
+      <section className="beneficios-inicio">
+        <div>
+          <h3>♪</h3>
+          <h4>Calidad musical</h4>
+          <p>Instrumentos para acompañar tu talento.</p>
+        </div>
+
+        <div>
+          <h3>♫</h3>
+          <h4>Gran variedad</h4>
+          <p>Encuentra diferentes opciones para ti.</p>
+        </div>
+
+        <div>
+          <h3>★</h3>
+          <h4>Atención personalizada</h4>
+          <p>Estamos aquí para ayudarte.</p>
+        </div>
+      </section>
 
     </main>
   );

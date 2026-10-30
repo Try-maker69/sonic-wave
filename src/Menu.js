@@ -1,17 +1,20 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function Menu() {
   return (
     <nav className="menu-navegacion">
-      <h2 className="logo">SONIC WAVE</h2>
+      <Link to="/" className="logo">
+        SONIC WAVE
+      </Link>
 
       <ul>
-        <li>Inicio</li>
-        <li>Instrumentos</li>
-        <li>Accesorios</li>
-        <li>Contacto</li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/instrumentos">Instrumentos</Link></li>
+        <li><Link to="/accesorios">Accesorios</Link></li>
+        <li><Link to="/contacto">Contacto</Link></li>
       </ul>
     </nav>
   );

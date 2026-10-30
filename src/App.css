@@ -141,3 +141,446 @@
     height: 220px;
   }
 }
+/* Diseño de los enlaces del menú */
+.menu-navegacion ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.menu-navegacion ul li a:hover {
+  color: #B8A5FF;
+}
+
+/* =================================
+   DISEÑO DE LAS SUBPÁGINAS
+================================= */
+
+.pagina-tienda {
+  min-height: 650px;
+  padding: 55px 7%;
+  background: linear-gradient(180deg, #171525, #201a35);
+}
+
+/* Encabezados */
+
+.encabezado-tienda {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.etiqueta-tienda {
+  color: #B8A5FF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.encabezado-tienda h1 {
+  color: #FFFFFF;
+  font-size: 38px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.encabezado-tienda p {
+  color: #C9C2DB;
+  font-size: 16px;
+}
+
+/* Catálogo */
+
+.catalogo-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Tarjetas */
+
+.tarjeta-producto {
+  background-color: #29213F;
+  border: 1px solid rgba(184, 165, 255, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-8px);
+  border-color: #8057E8;
+  box-shadow: 0 12px 30px rgba(128, 87, 232, 0.25);
+}
+
+/* Imágenes */
+
+.tarjeta-producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.tarjeta-producto:hover img {
+  transform: scale(1.04);
+}
+
+/* Información */
+
+.informacion-producto {
+  padding: 22px;
+}
+
+.informacion-producto h2 {
+  color: #B8A5FF;
+  font-size: 19px;
+  margin: 0 0 12px;
+}
+
+.informacion-producto p {
+  color: #D5D0E5;
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 70px;
+}
+
+/* Botones */
+
+.boton-producto {
+  background: #8057E8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.boton-producto:hover {
+  background: #B8A5FF;
+  color: #171525;
+  transform: scale(1.04);
+}
+
+/* Página de contacto */
+
+.contacto-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tarjeta-contacto {
+  background: #29213F;
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(184, 165, 255, 0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.tarjeta-contacto:hover {
+  transform: translateY(-6px);
+  border-color: #8057E8;
+}
+
+.tarjeta-contacto h2 {
+  color: #B8A5FF;
+  font-size: 19px;
+}
+
+.tarjeta-contacto p {
+  color: #E2DDF0;
+  font-size: 14px;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+  .pagina-tienda {
+    padding: 35px 5%;
+  }
+
+  .encabezado-tienda h1 {
+    font-size: 27px;
+  }
+
+  .catalogo-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-producto img {
+    height: 240px;
+  }
+}
+
+/* =====================================
+   PÁGINA PRINCIPAL SONIC WAVE
+===================================== */
+
+.inicio {
+  background: #171525;
+  color: white;
+}
+
+/* PORTADA */
+
+.portada-inicio {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 60px 9%;
+  background:
+    linear-gradient(90deg, rgba(23,21,37,0.98), rgba(23,21,37,0.65), rgba(23,21,37,0.2)),
+    url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1800")
+    center/cover no-repeat;
+}
+
+.contenido-portada {
+  max-width: 650px;
+}
+
+.subtitulo-portada {
+  color: #B8A5FF;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.contenido-portada h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.contenido-portada h1 span {
+  color: #B8A5FF;
+}
+
+.contenido-portada p {
+  color: #D5D0E5;
+  line-height: 1.8;
+  font-size: 16px;
+  max-width: 520px;
+}
+
+.botones-portada {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.boton-inicio,
+.boton-secundario {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.boton-inicio {
+  background: #8057E8;
+  color: white;
+}
+
+.boton-inicio:hover {
+  background: #B8A5FF;
+  color: #171525;
+  transform: translateY(-3px);
+}
+
+.boton-secundario {
+  border: 1px solid #B8A5FF;
+  color: white;
+}
+
+.boton-secundario:hover {
+  background: #B8A5FF;
+  color: #171525;
+}
+
+/* CATEGORÍAS */
+
+.seccion-categorias {
+  padding: 75px 7%;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-seccion span {
+  color: #B8A5FF;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.titulo-seccion h2 {
+  color: white;
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.titulo-seccion p {
+  color: #D5D0E5;
+}
+
+.rejilla-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tarjeta-categoria {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 15px;
+  text-decoration: none;
+  background: #29213F;
+}
+
+.tarjeta-categoria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.tarjeta-categoria:hover img {
+  transform: scale(1.1);
+}
+
+.nombre-categoria {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 20px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(transparent, rgba(15,12,25,0.95));
+  color: white;
+}
+
+.nombre-categoria h3 {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.nombre-categoria span {
+  color: #B8A5FF;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* PROMOCIÓN */
+
+.banner-promocion {
+  margin: 20px 7% 70px;
+  padding: 55px 40px;
+  border-radius: 18px;
+  background: linear-gradient(110deg, #30204e, #8057E8);
+  text-align: center;
+}
+
+.banner-promocion span {
+  color: #E0D5FF;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.banner-promocion h2 {
+  font-size: 30px;
+  margin: 15px 0;
+  color: white;
+}
+
+.banner-promocion p {
+  color: #F0EAFB;
+  margin-bottom: 25px;
+}
+
+/* BENEFICIOS */
+
+.beneficios-inicio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px 8% 70px;
+  text-align: center;
+}
+
+.beneficios-inicio h3 {
+  color: #B8A5FF;
+  font-size: 35px;
+}
+
+.beneficios-inicio h4 {
+  color: white;
+  font-size: 18px;
+}
+
+.beneficios-inicio p {
+  color: #D5D0E5;
+  font-size: 14px;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+  .portada-inicio {
+    min-height: 470px;
+    padding: 45px 7%;
+    background-position: center;
+  }
+
+  .contenido-portada h1 {
+    font-size: 40px;
+  }
+
+  .botones-portada {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .titulo-seccion h2 {
+    font-size: 25px;
+  }
+
+  .banner-promocion {
+    padding: 40px 20px;
+  }
+
+  .banner-promocion h2 {
+    font-size: 24px;
+  }
+}
+.logo {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  color: #FFFFFF;
+  transform: scale(1.04);
+}
